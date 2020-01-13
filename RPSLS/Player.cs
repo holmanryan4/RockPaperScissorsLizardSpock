@@ -30,14 +30,18 @@ namespace RPSLS
 
         }
 
-        
-         public virtual void chooseMove()
+        //member methods (Can Do)
+        public virtual int chooseMove()
         {
-            Console.WriteLine()
+            Console.WriteLine(name + " Please pick a move");
+            Console.WriteLine("0 for rock, 1 for paper, 2 for scissor, 3 for lizard, 4 for spock");
+            int choice =Int32.Parse(Console.ReadLine());
+            Console.ReadLine();
+            return choice;
         }
             
 
-        //member methods (Can Do)
+       
 
         
 
