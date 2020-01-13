@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    public class Program
+     public class Human : Player
     {
-        static void Main(string[] args)
+      public Human(string name)
         {
-            Computer C3PO = new Computer("C3PO");
-        }
+            this.name = name;
+        } 
     }
 }
