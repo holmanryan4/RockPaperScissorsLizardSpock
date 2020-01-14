@@ -12,7 +12,13 @@ namespace RPSLS
         //Member Variables (HAS A)
 
         //Constructor
+        public Human(string namepassedin)
+        {
 
+           
+
+            this.name = namepassedin;
+        }
         //Member Methods (CAN DO)
         public override void Move()
         {
@@ -22,14 +28,7 @@ namespace RPSLS
             //return base.Move();
         }
 
-        public Human(string name)
-        {
-
-            Console.WriteLine("Player1 what is your name?");
-            name = Console.ReadLine();
-
-            this.name = name;
-        }
+        
         //public override chooseMove()
         //{
         //    //return base.chooseMove();

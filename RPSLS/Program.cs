@@ -10,10 +10,11 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
-            Computer C3PO = new Computer("C3PO");
+            //Computer C3PO = new Computer("C3PO");
             //int choice.
             Game rungame = new Game();
             rungame.Rungame();
+            rungame.chooseNumofplayer();
             Console.ReadLine();
            
             Human human = new Human(Console.ReadLine());

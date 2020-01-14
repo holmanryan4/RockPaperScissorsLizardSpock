@@ -41,7 +41,7 @@ namespace RPSLS
                 Console.ReadLine();
                 Console.WriteLine("Listed below are the ways you can win the game.");
                 Console.WriteLine("Rock crushes Scissors \nScissors cuts Paper \nPaper covers Rock \nRock crushes Lizard \nLizard poisons Spock \nSpock smashes Scissors \nScissors decapitates Lizard \nLizard eats Paper \nPaper disproves Spock \nSpock vaporizes Rock");
-
+                Console.ReadLine();
             }
             else if (input == "n")
             {
@@ -51,9 +51,43 @@ namespace RPSLS
             }
            
             
-          Console.WriteLine("Now that you know how to play let pick how many players are playing. \n Will there be One or Two players?");
-            input = Console.ReadLine();
-        }   
-        
+         
+
+        }
+        public void chooseNumofplayer()
+        {
+            Console.WriteLine("Now that you know how to play let pick how many players are playing. \nWill there be One or Two players?");
+            string response = Console.ReadLine();
+            switch(response)
+            {
+                case "1":
+                    player1 = new Human("Bob");
+                    player2 = new Computer("C3PO");
+                    Console.WriteLine("Hello Bob and C3PO get ready to shoot!");
+                    break;
+                case "2":
+                    player1 = new Human("Bob");
+                    player2 = new Human("John");
+                    Console.WriteLine("Hello Bob and John get ready to shoot!");
+                    break;
+                default:
+                    Console.WriteLine("Not a valid option");
+
+            }
+            switch("1")
+            {
+                case "Rock":
+                    break;
+                case "Paper":
+                    break;
+
+                case "Scissors":
+                    break;
+                case "Lizard":
+                    break;
+                case "Spock":
+                    break;
+            }
+        }
     }
 }
