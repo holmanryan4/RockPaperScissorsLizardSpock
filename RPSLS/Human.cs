@@ -22,6 +22,14 @@ namespace RPSLS
          
 
             this.name = name;
-        } 
+        }
+        //public override chooseMove()
+        //{
+        //    //return base.chooseMove();
+            
+        //        Console.WriteLine("Choose a move");
+        //        //move = Console.ReadLine();
+            
+        //}
     }
 }

@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    public class Player
+    public abstract class Player
     {
         //Member variables (Has A)
         public string name;
+        int score;
+        string move;
         //public string moves;
 
         Move rock = new Move("rock");

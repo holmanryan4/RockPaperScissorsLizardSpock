@@ -11,7 +11,7 @@ namespace RPSLS
         public string start;
         public Player player1;
         public Player player2;
-        public string 
+        public string input;
         //Member Variables (HAS A)
 
         //Constructor
@@ -28,17 +28,30 @@ namespace RPSLS
         {
             Console.WriteLine("Hello and Welcome to the game Rock Paper Scissor Lizard Spock!");
             Console.WriteLine("Would you like to play?  Y for yes, N for no");
-            Console.ReadLine();
+            //Console.ReadLine();
             string input;
-            do
+            input = Console.ReadLine();
+
+            if (input == "y")
             {
                 Console.WriteLine("GREAT!");
-                Console.WriteLine("The rules of the game are simple! Best of 3, and you pick one of the following:  Rock, Paper, Scissor, Lizard, or Spock each round. ");
+                Console.WriteLine("The rules of the game are simple! Best of 3 and pick one of the following moves from the list each round: \n Rock, Paper, Scissor, Lizard, or Spock. ");
+                Console.ReadLine();
                 Console.WriteLine("Listed below are the ways you can win the game.");
-                Console.WriteLine("/n Rock -crushes Scissors \n Scissors cuts Paper \n");
-                input = Console.ReadLine();
+                Console.WriteLine("Rock crushes Scissors \nScissors cuts Paper \nPaper covers Rock \nRock crushes Lizard \nLizard poisons Spock \nSpock smashes Scissors \nScissors decapitates Lizard \nLizard eats Paper \nPaper disproves Spock \nSpock vaporizes Rock");
+
             }
-            while (input = Y);
+            else if (input == "n")
+            {
+
+                Console.WriteLine("Okay :( \n Maybe next time!");
+
+            }
+            //else if (input != "n")
+            //{
+            //    Console.WriteLine("Sorry that's not a correct response! Try Again!");
+                
+            //}
         }
         
     }
