@@ -12,6 +12,13 @@ namespace RPSLS
         {
             this.name = name;
         }
+        public override void Move()
+        {
+            //Console.WriteLine("Choose a move" + name);
+            //startRound();
+            //return startRound();
+            //return base.Move();
+        }
     }
     
 }

@@ -15,7 +15,10 @@ namespace RPSLS
             Game rungame = new Game();
             rungame.Rungame();
             Console.ReadLine();
-
+           
+            Human human = new Human(Console.ReadLine());
+            //human.chooseMove;
+            Console.ReadLine();
              
             
 

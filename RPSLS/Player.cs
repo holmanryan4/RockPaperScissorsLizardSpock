@@ -12,6 +12,8 @@ namespace RPSLS
         public string name;
         int score;
         string move;
+        string chooseMove;
+        
         //public string moves;
 
         Move rock = new Move("rock");
@@ -22,6 +24,8 @@ namespace RPSLS
         public List<Move> moves = new List<Move>();
 
         //Constructor
+        
+        public abstract void Move();
         public Player()
         {
             moves.Add(rock);
@@ -33,7 +37,7 @@ namespace RPSLS
         }
 
         //member methods (Can Do)
-        public virtual int chooseMove()
+        public virtual int startRound()
         {
             Console.WriteLine(name + " Please pick a move");
             Console.WriteLine("0 for rock, 1 for paper, 2 for scissor, 3 for lizard, 4 for spock");

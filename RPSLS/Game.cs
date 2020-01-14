@@ -23,8 +23,10 @@ namespace RPSLS
         //Member Methods (CAN DO)
         //player1.chooseMove;
 
-            //display welcome message
-            public void Rungame()
+
+        //Member Methods (CAN DO)
+        //display welcome message
+        public void Rungame()
         {
             Console.WriteLine("Hello and Welcome to the game Rock Paper Scissor Lizard Spock!");
             Console.WriteLine("Would you like to play?  Y for yes, N for no");
@@ -47,12 +49,11 @@ namespace RPSLS
                 Console.WriteLine("Okay :( \n Maybe next time!");
 
             }
-            //else if (input != "n")
-            //{
-            //    Console.WriteLine("Sorry that's not a correct response! Try Again!");
-                
-            //}
-        }
+           
+            
+          Console.WriteLine("Now that you know how to play let pick how many players are playing. \n Will there be One or Two players?");
+            input = Console.ReadLine();
+        }   
         
     }
 }
