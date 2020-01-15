@@ -26,7 +26,7 @@ namespace RPSLS
             int randomNum = round.Next(1, 5);
             choice = gestures[randomNum];
             Console.WriteLine("C3PO you chose " + choice);
-            player2.score++;
+            
 
         }
     }

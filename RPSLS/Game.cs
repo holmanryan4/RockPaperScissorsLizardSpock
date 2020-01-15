@@ -79,14 +79,14 @@ namespace RPSLS
         {
             Setup();
             ChooseNumofplayer();
-            int scorePlayer1 = 0;
-            int scorePlayer2 = 0;
 
-            while (scorePlayer1 < 3 && scorePlayer2 < 3)
+            while (player1.score < 3 && player2.score < 3)
             {
                 player1.ChooseGesture();
                 player2.ChooseGesture();
                 CompareGesture();
+
+                Console.WriteLine($"The current score:  {player1.name}: {player1.score} , {player2.name}: {player2.score}");
 
             }
         
@@ -118,6 +118,7 @@ namespace RPSLS
                 Console.WriteLine("Paper covers Rock");
                 Console.WriteLine(player1.name + "  WINS!!");
                 player1.score++;
+               
                 Console.ReadLine();
             }
             else if (player1.choice == "Paper" && player2.choice == "Spock")
