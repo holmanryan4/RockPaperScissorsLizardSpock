@@ -14,7 +14,7 @@ namespace RPSLS
             //int choice.
             Game rungame = new Game();
             rungame.Rungame();
-            rungame.chooseNumofplayer();
+            //rungame.chooseNumofplayer();
             Console.ReadLine();
            
             Human human = new Human(Console.ReadLine());

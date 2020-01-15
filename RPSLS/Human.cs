@@ -23,7 +23,7 @@ namespace RPSLS
         public override void Move()
         {
             Console.WriteLine("Choose a move" + name);
-            startRound();
+            //startRound();
             //return startRound();
             //return base.Move();
         }

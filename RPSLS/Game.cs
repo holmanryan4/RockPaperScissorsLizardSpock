@@ -8,23 +8,21 @@ namespace RPSLS
 {
     public class Game
     {
+        //Member Variables (HAS A)
         public string start;
         public Player player1;
         public Player player2;
         public string input;
-        //Member Variables (HAS A)
+        public int randomInt;
+        public bool PlayAgain = true;
 
         //Constructor
-        //public Game()
-        //{
-        //    player1 = new Human("john");
+       
 
-        //}
+        
         //Member Methods (CAN DO)
-        //player1.chooseMove;
+       
 
-
-        //Member Methods (CAN DO)
         //display welcome message
         public void Rungame()
         {
@@ -49,45 +47,75 @@ namespace RPSLS
                 Console.WriteLine("Okay :( \n Maybe next time!");
 
             }
-           
-            
-         
 
         }
-        public void chooseNumofplayer()
+        public void ChooseNumofplayer()
         {
-            Console.WriteLine("Now that you know how to play let pick how many players are playing. \nWill there be One or Two players?");
+            Console.WriteLine("Now that you know how to play lets pick how many players will be playing. \nWill there be One or Two players?");
             string response = Console.ReadLine();
             switch(response)
             {
                 case "1":
                     player1 = new Human("Bob");
                     player2 = new Computer("C3PO");
-                    Console.WriteLine("Hello Bob and C3PO get ready to shoot!");
+                    Console.WriteLine("Hello Bob and C3PO get ready to play!");
                     break;
                 case "2":
                     player1 = new Human("Bob");
                     player2 = new Human("John");
-                    Console.WriteLine("Hello Bob and John get ready to shoot!");
+                    Console.WriteLine("Hello Bob and John get ready to play!");
                     break;
                 default:
                     Console.WriteLine("Not a valid option");
+                    break;
+
 
             }
-            switch("1")
+            
+            //public  Playing()
             {
-                case "Rock":
-                    break;
-                case "Paper":
-                    break;
+                while (PlayAgain)
+                {
+                    int scorePlayer1 = 0;
+                    int scorePlayer2 = 0;
 
-                case "Scissors":
-                    break;
-                case "Lizard":
-                    break;
-                case "Spock":
-                    break;
+                    while(scorePlayer1 < 3 && scorePlayer2 < 3)
+                    {
+                        Console.WriteLine("choose between Rock, Paper, Scissors, Lizard, Spock");
+                         input = Console.ReadLine();
+                        input.ToUpper();
+
+                        Random round = new Random();
+                        randomInt = round.Next(1, 6);
+
+                        //switch (randomInt)
+                        //{
+                        //    case "Rock":
+                        //       input = "Rock ";
+
+                                
+                        //}
+                    }
+                }
             }
+            //public void player1movechoice()
+            //{
+            //    switch ("1")
+            //    {
+            //        case "Rock":
+            //            break;
+            //        case "Paper":
+            //            break;
+
+            //        case "Scissors":
+            //            break;
+            //        case "Lizard":
+            //            break;
+            //        case "Spock":
+            //            break;
+            //    }
+            
+            //}
         }
     }
 }
