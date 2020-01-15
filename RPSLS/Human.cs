@@ -29,29 +29,29 @@ namespace RPSLS
         //}
         public override void Move()
         {
-            Console.WriteLine("choose between Rock, Paper, Scissors, Lizard, Spock" + name);
+            Console.WriteLine(name + " choose between Rock, Paper, Scissors, Lizard, Spock");
             choice = Console.ReadLine();
             switch (choice)
             {
                 case "Rock":
-                    Console.WriteLine(name + "you chose Rock!");
+                    Console.WriteLine(name + " you chose Rock!");
 
                     break;
                 case "Paper":
-                    Console.WriteLine(name + "you chose Paper!");
+                    Console.WriteLine(name + " you chose Paper!");
                     break;
 
                 case "Scissors":
-                    Console.WriteLine(name + "you chose Scissors!");
+                    Console.WriteLine(name + " you chose Scissors!");
                     break;
                 case "Lizard":
-                    Console.WriteLine(name + "you chose Lizard!");
+                    Console.WriteLine(name + " you chose Lizard!");
                     break;
                 case "Spock":
-                    Console.WriteLine(name + "you chose Spock!");
+                    Console.WriteLine(name + " you chose Spock!");
                     break;
                 default:
-                    Console.WriteLine("Not a valid move choice");
+                    Console.WriteLine(name + " Not a valid move choice");
                     break;
             }   
 

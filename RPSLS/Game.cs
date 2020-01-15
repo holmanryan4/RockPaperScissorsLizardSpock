@@ -109,7 +109,14 @@ namespace RPSLS
             {
                 Console.WriteLine("Draw");
             }
-          
+            else if(player1.choice == "Rock" && player2.choice == "Scissors")
+            {
+                Console.WriteLine("Rock cruches Scissors!");
+                Console.WriteLine(player1.name + " WINS!!");
+            }
+               
+
+               
         }
     }
 }
