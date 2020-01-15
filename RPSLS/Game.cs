@@ -14,7 +14,7 @@ namespace RPSLS
         public Player player2;
         public string input;
         public int randomInt;
-        public bool PlayAgain = true;
+        public bool PlayAgain = false;
 
         //Constructor
        
@@ -59,6 +59,7 @@ namespace RPSLS
                     player1 = new Human("Bob");
                     player2 = new Computer("C3PO");
                     Console.WriteLine("Hello Bob and C3PO get ready to play!");
+                    
                     break;
                 case "2":
                     player1 = new Human("Bob");
@@ -74,48 +75,41 @@ namespace RPSLS
             
             //public  Playing()
             {
-                while (PlayAgain)
+                do
                 {
+
                     int scorePlayer1 = 0;
                     int scorePlayer2 = 0;
 
-                    while(scorePlayer1 < 3 && scorePlayer2 < 3)
+                    while (scorePlayer1 < 3 && scorePlayer2 < 3)
                     {
-                        Console.WriteLine("choose between Rock, Paper, Scissors, Lizard, Spock");
-                         input = Console.ReadLine();
-                        input.ToUpper();
-
-                        Random round = new Random();
-                        randomInt = round.Next(1, 6);
+                        player1.Move();
+                        player2.Move();
+                        CompareGesture();
+                        //Random round = new Random();
+                        //randomInt = round.Next(1, 6);
 
                         //switch (randomInt)
                         //{
                         //    case "Rock":
                         //       input = "Rock ";
 
-                                
+
                         //}
                     }
-                }
-            }
-            //public void player1movechoice()
-            //{
-            //    switch ("1")
-            //    {
-            //        case "Rock":
-            //            break;
-            //        case "Paper":
-            //            break;
 
-            //        case "Scissors":
-            //            break;
-            //        case "Lizard":
-            //            break;
-            //        case "Spock":
-            //            break;
-            //    }
+                } while (PlayAgain);
+            }
+
             
-            //}
+        }
+        public void CompareGesture()
+        {
+            if(player1.choice == player2.choice)
+            {
+                Console.WriteLine("Draw");
+            }
+          
         }
     }
 }

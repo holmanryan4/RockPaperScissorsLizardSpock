@@ -10,8 +10,8 @@ namespace RPSLS
     {
         //Member variables (Has A)
         public string name;
-        int score;
-        string choice;
+        public int score;
+        public string choice;
 
         //public string moves;
 
@@ -36,6 +36,7 @@ namespace RPSLS
         }
 
         //member methods (Can Do)
+        
         //public virtual int startRound()
         //{
         //    Console.WriteLine(name + " Please pick a move");
