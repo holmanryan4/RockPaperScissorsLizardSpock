@@ -10,8 +10,8 @@ namespace RPSLS
     {
 
         //Member Variables (HAS A)
+        Random round = new Random();
         int randomInt;
-
 
         //Constructor
 
@@ -20,36 +20,14 @@ namespace RPSLS
             this.name = name;
         }
         //Member Methods (CAN DO)
-        public override void Move()
+        public override void ChooseGesture()
         {
-            do
-            {
 
-                int scorePlayer1 = 0;
-                int scorePlayer2 = 0;
+            int randomNum = round.Next(1, 5);
+            choice = gestures[randomNum];
+            Console.WriteLine("C3PO you chose " + choice);
+            player2.score++;
 
-                while (scorePlayer1 < 3 && scorePlayer2 < 3)
-                {
-                    
-                    //player1.Move();
-                    //player2.Move();
-                    //CompareGesture();
-                    Random round = new Random();
-                    randomInt = round.Next(1, 5);
-
-
-                    
-                }
-                switch (randomInt)
-                {
-
-                }
-
-            } while (PlayAgain);
-            //Console.WriteLine("Choose a move" + name);
-            //startRound();
-            //return startRound();
-            //return base.Move();
         }
     }
     

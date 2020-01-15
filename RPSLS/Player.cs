@@ -20,11 +20,11 @@ namespace RPSLS
         //Move scissor = new Move("scissor");
         //Move lizard = new Move("lizard");
         //Move spock = new Move("spock");
-        public List<string> moves = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock"};
+        public List<string> gestures = new List<string>() { "Rock", "Paper", "Scissors", "Lizard", "Spock"};
 
         //Constructor
         
-        public abstract void Move();
+        public abstract void ChooseGesture();
         public Player()
         {
             //moves.Add(rock);

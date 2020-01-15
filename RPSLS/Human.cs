@@ -27,7 +27,7 @@ namespace RPSLS
         //    //return startRound();
         //    //return base.Move();
         //}
-        public override void Move()
+        public override void ChooseGesture()
         {
             Console.WriteLine(name + " choose between Rock, Paper, Scissors, Lizard, Spock");
             choice = Console.ReadLine();

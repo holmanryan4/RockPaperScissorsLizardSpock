@@ -13,7 +13,7 @@ namespace RPSLS
         public Player player1;
         public Player player2;
         public string input;
-        public int randomInt;
+
         public bool PlayAgain = false;
 
         //Constructor
@@ -24,7 +24,7 @@ namespace RPSLS
 
 
         //display welcome message
-        public void Rungame()
+        public void Setup()
         {
             Console.WriteLine("Hello and Welcome to the game Rock Paper Scissor Lizard Spock!");
             Console.WriteLine("Would you like to play?  Y for yes, N for no");
@@ -47,9 +47,9 @@ namespace RPSLS
 
                 Console.WriteLine("Okay :( \n Maybe next time!");
                 Console.ReadLine();
-                
+
             }
-                                       ///// next line still print after selecting no/////
+            ///// next line still print after selecting no/////
         }
         public void ChooseNumofplayer()
         {
@@ -72,102 +72,114 @@ namespace RPSLS
                     Console.WriteLine("Not a valid option");
                     break;
 
-                            //////if player choices an invalid option they can repick/////
+                    //////if player choices an invalid option they can repick/////
             }
-
-            //public  Playing()
-            {
-                //do
-                //{
-
-                //    int scorePlayer1 = 0;
-                //    int scorePlayer2 = 0;
-
-                //    while (scorePlayer1 < 3 && scorePlayer2 < 3)
-                //    {
-                //        player1.Move();
-                //        player2.Move();
-                //        CompareGesture();
-                //        Random round = new Random();
-                //        randomInt = round.Next(1, 6);
-
-                //        //switch (randomInt)
-                //        //{
-                //        //    case "Rock":
-                //        //       input = "Rock ";
-
-
-                //        //}
-                //    }
-
-                //} while (PlayAgain);
-            }
-
-
         }
+        public void RunGame()
+        {
+            Setup();
+            ChooseNumofplayer();
+            int scorePlayer1 = 0;
+            int scorePlayer2 = 0;
+
+            while (scorePlayer1 < 3 && scorePlayer2 < 3)
+            {
+                player1.ChooseGesture();
+                player2.ChooseGesture();
+                CompareGesture();
+
+            }
+        
+        }
+
         public void CompareGesture()
         {
             if (player1.choice == player2.choice)
             {
                 Console.WriteLine("Draw");
+                //Console.ReadLine();
             }
             else if (player1.choice == "Rock" && player2.choice == "Scissors")
             {
                 Console.WriteLine("Rock cruches Scissors!");
                 Console.WriteLine(player1.name + " WINS!!");
+                player1.score++;
+                Console.ReadLine();
             }
-            else if (player1.choice == "Rock" && player2.choice == " Lizard")
+            else if (player1.choice == "Rock" && player2.choice == "Lizard")
             {
                 Console.WriteLine("Rock cruches Lizard");
                 Console.WriteLine(player1.name + " WINS!!");
+                player1.score++;
+                Console.ReadLine();
             }
-            else if (player1.choice == "Paper" && player2.choice == " Rock")
+            else if (player1.choice == "Paper" && player2.choice == "Rock")
             {
                 Console.WriteLine("Paper covers Rock");
                 Console.WriteLine(player1.name + "  WINS!!");
+                player1.score++;
+                Console.ReadLine();
             }
-            else if (player1.choice == "Paper" && player2.choice == " Spock")
+            else if (player1.choice == "Paper" && player2.choice == "Spock")
             {
                 Console.WriteLine("Paper dispoves Spock");
                 Console.WriteLine(player1.name + "  WINS!!");
+                player1.score++;
+                Console.ReadLine();
 
             }
-            else if (player1.choice == "Scissors" && player2.choice == " Paper")
+            else if (player1.choice == "Scissors" && player2.choice == "Paper")
             {
                 Console.WriteLine("Scissors cuts Paper");
                 Console.WriteLine(player1.name + "  WINS!!");
+                player1.score++;
+                Console.ReadLine();
             }
-            else if (player1.choice == "Scissors" && player2.choice == " Lizard")
+            else if (player1.choice == "Scissors" && player2.choice == "Lizard")
             {
                 Console.WriteLine("Scissors decapitates Lizard");
                 Console.WriteLine(player1.name + "  WINS!!");
+                player1.score++;
+                Console.ReadLine();
             }
-            else if (player1.choice == "Lizard" && player2.choice == " Paper")
+            else if (player1.choice == "Lizard" && player2.choice == "Paper")
             {
                 Console.WriteLine("Lizard eats Paper");
                 Console.WriteLine(player1.name + "  WINS!!");
-
+                player1.score++;
+                Console.ReadLine();
 
             }
-            else if (player1.choice == "Lizard" && player2.choice == " Spock")
+            else if (player1.choice == "Lizard" && player2.choice == "Spock")
             {
                 Console.WriteLine("Lizard poisons Spock");
                 Console.WriteLine(player1.name + "  WINS!!");
+                player1.score++;
+                Console.ReadLine();
             }
-            else if (player1.choice == "Spock" && player2.choice == " Rock")
+            else if (player1.choice == "Spock" && player2.choice == "Rock")
             {
                 Console.WriteLine("Spock vaporizes Rock");
                 Console.WriteLine(player1.name + "  WINS!!");
+                player1.score++;
+                Console.ReadLine();
             }
-            else if (player1.choice == "Spock" && player2.choice == " Scissors")
+            else if (player1.choice == "Spock" && player2.choice == "Scissors")
             {
                 Console.WriteLine("Spock smashes Scissors");
                 Console.WriteLine(player1.name + "  WINS!!");
+                player1.score++;
+                Console.ReadLine();
             }
             else
             {
                 Console.WriteLine(player2.name + "  WINS!!");
+                
+                player2.score++;
+                Console.ReadLine();
             }
         }
     }
 }
+
+

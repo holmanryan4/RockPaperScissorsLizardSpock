@@ -12,13 +12,9 @@ namespace RPSLS
         {
             
             Game rungame = new Game();
-            rungame.Rungame();
+            rungame.RunGame();
             
-            
-            rungame.ChooseNumofplayer();
-
-            //Human human = new Human(Console.ReadLine());
-            ////human.chooseMove;
+          
             Console.ReadLine();
              
             
