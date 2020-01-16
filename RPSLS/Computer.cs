@@ -11,7 +11,7 @@ namespace RPSLS
 
         //Member Variables (HAS A)
         Random round = new Random();
-        int randomInt;
+       
 
         //Constructor
 

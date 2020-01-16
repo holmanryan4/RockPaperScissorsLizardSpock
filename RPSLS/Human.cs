@@ -14,19 +14,10 @@ namespace RPSLS
         //Constructor
         public Human(string namepassedin)
         {
-
-
-
             this.name = namepassedin;
         }
         //Member Methods (CAN DO)
-        //public override void Move()
-        //{
-        //    Console.WriteLine("Choose a move" + name);
-        //    //startRound();
-        //    //return startRound();
-        //    //return base.Move();
-        //}
+        
         public override void ChooseGesture()
         {
             Console.WriteLine(name + " choose between Rock, Paper, Scissors, Lizard, Spock");
@@ -58,11 +49,6 @@ namespace RPSLS
 
         }
 
-             
-                
-             
-
-           
-        
+                     
     }   
 }

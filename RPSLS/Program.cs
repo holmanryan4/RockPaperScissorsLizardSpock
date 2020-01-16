@@ -13,13 +13,10 @@ namespace RPSLS
             
             Game rungame = new Game();
             rungame.RunGame();
-            
-          
+                     
             Console.ReadLine();
              
-            
-
-
+           
         }
     }
 }

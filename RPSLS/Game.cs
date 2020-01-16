@@ -41,6 +41,7 @@ namespace RPSLS
                 Console.ReadLine();
                 Console.WriteLine("Rock crushes Scissors \nScissors cuts Paper \nPaper covers Rock \nRock crushes Lizard \nLizard poisons Spock \nSpock smashes Scissors \nScissors decapitates Lizard \nLizard eats Paper \nPaper disproves Spock \nSpock vaporizes Rock");
                 Console.ReadLine();
+                Console.WriteLine("Now that you know how to play lets pick how many players will be playing. \nWill there be One or Two players?");
             }
             else if (input == "n")
             {
@@ -49,11 +50,11 @@ namespace RPSLS
                 Console.ReadLine();
 
             }
-            ///// next line still print after selecting no/////
+            
         }
         public void ChooseNumofplayer()
         {
-            Console.WriteLine("Now that you know how to play lets pick how many players will be playing. \nWill there be One or Two players?");
+            
             string response = Console.ReadLine();
             switch (response)
             {
@@ -72,7 +73,8 @@ namespace RPSLS
                     Console.WriteLine("Not a valid option");
                     break;
 
-                    //////if player choices an invalid option they can repick/////
+
+                    
             }
         }
         public void RunGame()
@@ -87,17 +89,25 @@ namespace RPSLS
                 CompareGesture();
 
                 Console.WriteLine($"The current score:  {player1.name}: {player1.score} , {player2.name}: {player2.score}");
-
+               
             }
-        
+            if (player1.score == 3)
+            {
+                Console.WriteLine(player1.name + " You won all three games!! Thanks for playing! hope to see you soon for another match :)");
+            }
+             else if(player2.score == 3)
+            {
+                Console.WriteLine(player2.name + " You won all three games!! Thanks for playing! hope to see you soon for another match :)");
+            }   
         }
 
         public void CompareGesture()
         {
+            
             if (player1.choice == player2.choice)
             {
                 Console.WriteLine("Draw");
-                //Console.ReadLine();
+               
             }
             else if (player1.choice == "Rock" && player2.choice == "Scissors")
             {
