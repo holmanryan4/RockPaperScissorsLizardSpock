@@ -42,7 +42,8 @@ namespace RPSLS
                     Console.WriteLine(name + " you chose Spock!");
                     break;
                 default:
-                    Console.WriteLine(name + " Not a valid move choice");
+                    Console.WriteLine(name + " Not a valid move choice please try again");
+                    ChooseGesture();
                     break;
             }   
 
